@@ -545,7 +545,7 @@ function createPropertyDefinition(object, name, desc, isSession) {
                 }
                 return result;
             }
-            return _.result(def, 'default');
+            return (this._values[name] = _.result(def, 'default'));
         }
     });
 
